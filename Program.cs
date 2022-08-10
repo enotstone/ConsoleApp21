@@ -33,12 +33,10 @@ namespace ConsoleApp21
 
             ThreadStart threadStart = new ThreadStart(Gardner1);
             Thread thread = new Thread(threadStart);
-            //ThreadStart threadStart2 = new ThreadStart(Gardner2);
-            //Thread thread2 = new Thread(threadStart2);
             thread.Start();
-            //thread2.Start();
+
             Gardner2();
-            //Console.ReadKey();
+
             for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < m; j++)
@@ -62,11 +60,8 @@ namespace ConsoleApp21
                     {
                         squard[i, j] = 1;
                     }
-
-                    //Console.Write(squard[i, j] + " ");
+                    Thread.Sleep(10);
                 }
-                //Thread.Sleep(100);
-                //Console.WriteLine();
             }
         }
 
@@ -80,9 +75,10 @@ namespace ConsoleApp21
                     {
                         squard[i, j] = 2;
                     }
+                    Thread.Sleep(10);
                     //Console.Write(squard[i, j] + " ");
-                    
-                    
+
+
                     //for (int ir = 0; ir<n; ir++)
                     //{
                     //    for (int jr = 0; jr<m; jr++)
